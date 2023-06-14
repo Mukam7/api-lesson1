@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h2, a, p {
+  padding-top: 10px;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.about-me {
+  text-align: center;
+  padding: 25px;
+  background-color: black;
+  color: white;
+}
+
+.users-cards, .post-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-top: 100px;
+}
+
+.user-card, .todos-card, .post-card{
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  animation: cardAnimation 10s ease;
+  color: #333;
+  border: 1px solid #ccc;
+  background: linear-gradient(45deg, #ffcc00, #ff0c5a, blue, red, darkcyan);
+  background-size: 400%;
+  color: white;
+}
+
+.user-btn {
+  padding-top: 15px;
+}
+
+
+button {
+  padding: 10px;
+  margin-top: 5px;
+  color: white;
+  cursor: pointer;
+  background: blue;
+  border-radius: 7px;
+}
+
+.todos-card{
+  margin-top: 50px;
+}
+
+.post-cards {
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.post-card p{
+  padding-bottom: 20px;
+}
+
+.post-btn {
+  padding-bottom: 10px;
+}
+
+.post-btn a {
+  background-color: crimson;
+  padding: 10px;
+}
+
+.comments-card{
+  height: 150px;
+  background-color: crimson;
+  margin-top: 50px;
+  padding: 20px;
+  color: white;
+}
+
+.comments-btn{
+  width: 200px;
+  background-color: orange;
+  padding: 7px;
+  margin-top: 5px;
+}
+
+
+@keyframes cardAnimation {
+  0% {
+    border-color: #ccc;
+    background-position: 0% 50%;
+  }
+  50% {
+    border-color: #ff0000;
+    background-position: 100% 50%;
+  }
+  100% {
+    border-color: #ccc;
+  }
+}
+
+@media (max-width: 950px) {
+  .users-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 750px) {
+  .users-cards, .post-cards {
+    grid-template-columns: 1fr;
+  }
+}
